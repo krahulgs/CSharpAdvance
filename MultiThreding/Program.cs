@@ -37,10 +37,6 @@ namespace MultiThreding
 
         }
 
-      
-
-
-
         static void Main(string[] args)
         {
             Parallel.Invoke(() => task1(), () => task2(), () => task3());
