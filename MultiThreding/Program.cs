@@ -18,9 +18,15 @@ namespace MultiThreding
             Thread.Sleep(1000);
             Console.WriteLine("Task 2 finished");
         }
+        static void task3()
+        {
+            Console.WriteLine("Task 3 started");
+            Thread.Sleep(3000);
+            Console.WriteLine("Task 3 finished");
+        }
         static void Main(string[] args)
         {
-            Parallel.Invoke(() => task1(), () => task2());
+            Parallel.Invoke(() => task1(), () => task2(),()=>task3());
             Console.WriteLine("Task Finished, Press any key to exit");
             Console.ReadKey();
         }
